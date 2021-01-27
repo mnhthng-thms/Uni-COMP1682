@@ -1,0 +1,24 @@
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Staff Management System</title>
+    <style>
+        .mono {
+            font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+            font-size: small;
+        }
+    </style>
+</head>
+<body>
+<h1> DEMO LAB #2 </h1>
+<p class="mono">
+    <a href="..">Prev Lab Demo &lt;&lt;</a>
+</p>
+<p>
+    When <span class="mono">Submit</span> button clicked, <span class="mono">HomeController</span> received submitted
+    data from <em>POST</em> request, then update and render this page accordingly.
+</p>
+<h2>Staff's Updated Information</h2>
+<p>Staff ID: <span th:text="${staff.id}"></span></p>
+<p>Full Name: <span th:text="${staff.fullName}"></span></p>
+</body>
+</html>

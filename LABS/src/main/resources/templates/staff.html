@@ -1,0 +1,33 @@
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Staff Management System</title>
+    <style>
+        .mono {
+            font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+            font-size: small;
+        }
+    </style>
+</head>
+<body>
+<h1> DEMO LAB #2 </h1>
+<br/>
+<p class="mono">
+    <a href="..">Prev Lab Demo &lt;&lt;</a>
+</p>
+<p>
+    This page is rendered by <span class="mono">HomeController</span> when this server application
+    received HTTP request sent by browser to the endpoint <span class="mono">./staff</span>
+</p>
+<br/>
+<h2>Register new Staff</h2>
+<form action="#" th:action="@{/staff}" th:object="${staff}" method="POST">
+    Staff ID: <input type="text" th:field="*{id}"/>
+    Full Name: <input type="text" th:field="*{fullName}"/>
+    <input type="submit" value="Submit"/>
+    <input type="reset" value="Reset"/>
+</form>
+<h2>Staff's Current Information</h2>
+<p>Staff ID: <span th:text="${staff.id}"></span></p>
+<p>Full Name: <span th:text="${staff.fullName}"></span></p>
+</body>
+</html>
